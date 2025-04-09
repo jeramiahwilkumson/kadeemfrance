@@ -85,22 +85,23 @@ nav a:hover {
 
 .track-art {
     width: 100%;
-    height: 150px;
-    background: url('https://images.unsplash.com/photo-1579541592081-19dc8c589ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60') no-repeat center center/cover; /* Fallback */
+    height: 200px; /* Increased height to better fit square album art */
+    background: url('https://images.unsplash.com/photo-1579541592081-19dc8c589ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60') no-repeat center center/contain; /* Changed to contain */
     border-radius: 10px;
     margin-bottom: 15px;
 }
 
+/* Specific track art for each card using nth-child */
 .track-container .track-card:nth-child(1) .track-art {
-    background: url('https://raw.githubusercontent.com/jeramiahwilkumson/kadeemfrance/refs/heads/main/FUQ%20cover.jpg') no-repeat center center/cover; /* FUQ */
+    background: url('https://raw.githubusercontent.com/jeramiahwilkumson/kadeemfrance/refs/heads/main/FUQ%20cover.jpg') no-repeat center center/contain; /* FUQ */
 }
 
 .track-container .track-card:nth-child(2) .track-art {
-    background: url('https://raw.githubusercontent.com/jeramiahwilkumson/kadeemfrance/refs/heads/main/100%20racks%20cover.jpg') no-repeat center center/cover; /* 100 RACKS */
+    background: url('https://raw.githubusercontent.com/jeramiahwilkumson/kadeemfrance/refs/heads/main/100%20racks%20cover.jpg') no-repeat center center/contain; /* 100 RACKS */
 }
 
 .track-container .track-card:nth-child(3) .track-art {
-    background: url('https://raw.githubusercontent.com/jeramiahwilkumson/kadeemfrance/refs/heads/main/POTENTIAL%20JEREAMIAH%20WILKUMMSON%2015%20COVER.png') no-repeat center center/cover; /* JERAMIAH WILKUMSON 15 */
+    background: url('https://raw.githubusercontent.com/jeramiahwilkumson/kadeemfrance/refs/heads/main/POTENTIAL%20JEREAMIAH%20WILKUMMSON%2015%20COVER.png') no-repeat center center/contain; /* JERAMIAH WILKUMSON 15 */
 }
 
 footer {
