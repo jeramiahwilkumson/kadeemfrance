@@ -12,33 +12,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Animate track cards on scroll
+    // Fade in track cards on scroll
     const trackCards = document.querySelectorAll('.track-card');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.animation = 'cardPop 0.5s ease forwards';
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.3 });
 
-    trackCards.forEach(card => observer.observe(card));
-
-    // Listen button pulse effect
-    const listenBtn = document.querySelector('.listen-btn');
-    listenBtn.addEventListener('mouseover', () => {
-        listenBtn.style.animation = 'pulse 0.5s infinite';
-    });
-    listenBtn.addEventListener('mouseout', () => {
-        listenBtn.style.animation = '';
+    trackCards.forEach(card => {
+        card.style.transform = 'translateY(20px)'; // Initial offset
+        observer.observe(card);
     });
 });
-
-// Additional animation for track cards
-const styleSheet = document.styleSheets[0];
-styleSheet.insertRule(`
-    @keyframes cardPop {
-        0% { transform: scale(0.8); opacity: 0; }
-        100% { transform: scale(1); opacity: 1; }
-    }
-`, styleSheet.cssRules.length);
