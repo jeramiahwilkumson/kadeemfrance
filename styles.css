@@ -47,7 +47,7 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('https://raw.githubusercontent.com/jeramiahwilkumson/kadeemfrance/refs/heads/main/dave%20blunt.jpg0') no-repeat center center/cover;
+    background: url('https://raw.githubusercontent.com/jeramiahwilkumson/kadeemfrance/refs/heads/main/dave%20blunt.jpg') no-repeat center center/cover;
     opacity: 0;
     animation: fadeIn 1.5s ease forwards;
 }
