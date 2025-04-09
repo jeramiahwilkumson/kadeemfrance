@@ -48,7 +48,7 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     /* Replaced gradient with image */
-    background: url('https://images.unsplash.com/photo-1510915361894-40c5432d0b8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    background: url('https://raw.githubusercontent.com/jeramiahwilkumson/kadeemfrance/refs/heads/main/dave%20blunt.jpg0') no-repeat center center/cover;
     animation: fadeIn 2s ease-in-out;
 }
 
