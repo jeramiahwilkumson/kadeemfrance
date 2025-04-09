@@ -22,13 +22,13 @@ header {
     align-items: center;
     background: rgba(0, 0, 0, 0.8);
     z-index: 1000;
-    animation: pulse 2s infinite;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards; /* Replaced pulse with fade */
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.02); }
-    100% { transform: scale(1); }
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 nav a {
@@ -47,29 +47,16 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Replaced gradient with image */
     background: url('https://raw.githubusercontent.com/jeramiahwilkumson/kadeemfrance/refs/heads/main/dave%20blunt.jpg0') no-repeat center center/cover;
-    animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
 }
 
 .hero-text {
     text-align: center;
-    transform: translateY(20px);
-    animation: float 3s ease-in-out infinite;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards 0.5s; /* Delayed fade-in, no float */
 }
-
-@keyframes float {
-    0% { transform: translateY(20px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(20px); }
-}
-
-/* Removed listen-btn styles since button is commented out in HTML */
 
 #music {
     padding: 80px 20px;
@@ -88,24 +75,22 @@ nav a:hover {
     padding: 20px;
     background: #2a2a2a;
     border-radius: 15px;
-    transform: perspective(1000px) rotateY(0deg);
-    transition: transform 0.5s;
+    opacity: 0; /* Initial state for scroll fade */
+    transition: transform 0.3s, opacity 0.3s;
 }
 
 .track-card:hover {
-    transform: perspective(1000px) rotateY(360deg);
+    transform: translateY(-10px); /* Subtle lift instead of 360° spin */
 }
 
 .track-art {
     width: 100%;
     height: 150px;
-    /* Replaced gradient with unique image for each track */
-    background: url('https://images.unsplash.com/photo-1579541592081-19dc8c589ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60') no-repeat center center/cover;
+    background: url('https://images.unsplash.com/photo-1579541592081-19dc8c589ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60') no-repeat center center/cover; /* Fallback */
     border-radius: 10px;
     margin-bottom: 15px;
 }
 
-/* Specific track art for each card using nth-child */
 .track-container .track-card:nth-child(1) .track-art {
     background: url('https://raw.githubusercontent.com/jeramiahwilkumson/kadeemfrance/refs/heads/main/FUQ%20cover.jpg') no-repeat center center/cover; /* FUQ */
 }
@@ -122,4 +107,6 @@ footer {
     text-align: center;
     padding: 20px;
     background: #111;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 1s;
 }
