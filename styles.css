@@ -23,7 +23,7 @@ header {
     background: rgba(0, 0, 0, 0.8);
     z-index: 1000;
     opacity: 0;
-    animation: fadeIn 1s ease forwards; /* Replaced pulse with fade */
+    animation: fadeIn 1s ease forwards;
 }
 
 @keyframes fadeIn {
@@ -54,11 +54,11 @@ nav a:hover {
 
 .hero-text {
     text-align: center;
-    background: rgba(0, 0, 0, 0.6); /* Transparent black background for whole section */
-    padding: 20px 30px; /* Added padding for spacing */
-    border-radius: 10px; /* Rounded corners */
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px 30px;
+    border-radius: 10px;
     opacity: 0;
-    animation: fadeIn 2s ease forwards 0.5s; /* Delayed fade-in, no float */
+    animation: fadeIn 2s ease forwards 0.5s;
 }
 
 #music {
@@ -78,32 +78,44 @@ nav a:hover {
     padding: 20px;
     background: #2a2a2a;
     border-radius: 15px;
-    opacity: 0; /* Initial state for scroll fade */
+    opacity: 0;
     transition: transform 0.3s, opacity 0.3s;
 }
 
 .track-card:hover {
-    transform: translateY(-10px); /* Subtle lift instead of 360° spin */
+    transform: translateY(-10px);
 }
 
 .track-art {
     width: 100%;
-    height: 200px; /* Adjusted for better album art fit */
-    background: url('https://raw.githubusercontent.com/jeramiahwilkumson/kadeemfrance/refs/heads/main/dave%20blunt.jpg') no-repeat center center/contain; /* Fallback with contain */
+    height: 200px;
+    background: url('https://raw.githubusercontent.com/jeramiahwilkumson/kadeemfrance/refs/heads/main/pavlova%20bong.jpg') no-repeat center center/contain;
     border-radius: 10px;
     margin-bottom: 15px;
 }
 
 .track-container .track-card:nth-child(1) .track-art {
-    background: url('https://raw.githubusercontent.com/jeramiahwilkumson/kadeemfrance/refs/heads/main/FUQ%20cover.jpg') no-repeat center center/contain; /* FUQ */
+    background: url('https://raw.githubusercontent.com/jeramiahwilkumson/kadeemfrance/refs/heads/main/FUQ%20cover.jpg') no-repeat center center/contain;
 }
 
 .track-container .track-card:nth-child(2) .track-art {
-    background: url('https://raw.githubusercontent.com/jeramiahwilkumson/kadeemfrance/refs/heads/main/100%20racks%20cover.jpg') no-repeat center center/contain; /* 100 RACKS */
+    background: url('https://raw.githubusercontent.com/jeramiahwilkumson/kadeemfrance/refs/heads/main/100%20racks%20cover.jpg') no-repeat center center/contain;
 }
 
 .track-container .track-card:nth-child(3) .track-art {
-    background: url('https://raw.githubusercontent.com/jeramiahwilkumson/kadeemfrance/refs/heads/main/jermaiah%20wilkumson%2015%20cover.jpg') no-repeat center center/contain; /* JERAMIAH WILKUMSON 15 */
+    background: url('https://raw.githubusercontent.com/jeramiahwilkumson/kadeemfrance/refs/heads/main/POTENTIAL%20JEREAMIAH%20WILKUMMSON%2015%20COVER.png') no-repeat center center/contain;
+}
+
+#about {
+    padding: 80px 20px;
+    text-align: center;
+    background: #222; /* Slightly lighter than body for contrast */
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 0.5s;
+}
+
+#about h2 {
+    margin-bottom: 20px;
 }
 
 footer {
